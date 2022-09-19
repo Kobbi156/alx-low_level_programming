@@ -1,22 +1,18 @@
-#include"main.h"
+#include "main.h"
 
 /**
  * print_rev - prints a string in reverse
- *
- * @s: string parameter input
- *
- * Return: Nothing
-*/
+ * @s: the used string reference pointer
+ * Return: 0
+ */
 
 void print_rev(char *s)
 {
-	int index;
+	int i = 0;
 
-	/*finds the length of string without null character*/
-	for (index = 0; s[index] != '\0'; ++index)
-		;
-
-	/*print char from the last index as you decrement*/
-	for (--index; index >= 0; --index)
-		_putchar(s[index]);
+	while (s[i])
+		i++;
+	while (i--)
+		_putchar(s[i]);
 	_putchar('\n');
+}
